@@ -8,3 +8,5 @@ If town is not managed, heros might get mad and leave,
 or worse,
 start rampaging.
 You need the heroes to clear out dungeons to gather resources to expand your town.
+
+*made with the help of SFML 2.3 library.

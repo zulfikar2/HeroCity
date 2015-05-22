@@ -14,12 +14,14 @@
     <ClCompile Include="citizen.cpp" />
     <ClCompile Include="item.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="menu.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="basestats.h" />
     <ClInclude Include="citizen.h" />
     <ClInclude Include="equipment.h" />
     <ClInclude Include="item.h" />
+    <ClInclude Include="menu.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="citizen_names.txt" />
