@@ -1,0 +1,14 @@
+# Progress Plan for Hero City
+
+- Create a view on an angle based on map dimensions
+- Have view move on x and y plane when mouse is pushing edges
+- Sprites to Add :
+      Citizens
+      Dashboard
+      Dashboard Icons
+      Map tileset
+      Backround
+      Enemies
+      Items
+      Menu Icons/Backround
+- Menu screen itself : Play, Options, About -> Credits, Exit
