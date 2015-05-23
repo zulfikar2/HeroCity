@@ -29,20 +29,20 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="citizen.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="basestats.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="citizen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="equipment.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="item.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="menu.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

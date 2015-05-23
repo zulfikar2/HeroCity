@@ -8,12 +8,16 @@ int main() {
 
 	sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "SFML_TEST");
 
-	/*sf::Texture character;
+	/*
+	-------EXAMPLE. SHOULD TRY NOT TO LOAD SPRITES/TEXTURES IN MAIN----------
+	sf::Texture character;
 	if (!character.loadFromFile("../CharSpriteSheet(BannedStory_PlaceHolder)/alert_0.png")){
 	std::cout << "CHARACTER TEXTURE ERROR!" << std::endl;
 	}*/
 
 	Menu menu(WINDOW_WIDTH, WINDOW_HEIGHT);
+
+	sf::Clock clock;
 
 	bool paused = false;
 
@@ -85,6 +89,13 @@ int main() {
 
 			//}
 		}
+
+		sf::Time time = clock.getElapsedTime();
+		//citizen.update(time.asMilliseconds());  updates sprites/textures...etc frame independant of citizen object
+
+		std::cout << 1.0f / time.asSeconds() << std::endl; //shows frame rate
+
+		clock.restart().asMilliseconds();
 
 		window.clear();
 

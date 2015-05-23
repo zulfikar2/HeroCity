@@ -1,8 +1,12 @@
 #include "citizen.h"
 
-citizen::citizen() { // no name is defined. Pick one from list randomly
-	stats.setName(generateName());
+//spawn will always happen on z pos 0. Only x and y are allowed to change to stop spawning in dungeons/undergound
 
+citizen::citizen(float pos_x, float pos_y) { // no name is defined. Pick one from list randomly
+
+	citizen::pos_x = pos_x;
+	citizen::pos_y = pos_y;
+	stats.setName(generateName());
 	baseDmg = (float)(rand() % 6); //0-5
 	stats.setHealth(100.f);
 	stats.setDamage(baseDmg);
@@ -18,7 +22,10 @@ citizen::citizen() { // no name is defined. Pick one from list randomly
 	equip.setWeapon(-1);
 }
 
-citizen::citizen(std::string n) {
+citizen::citizen(std::string n, float pos_x, float pos_y) { //name is defined
+
+	citizen::pos_x = pos_x;
+	citizen::pos_y = pos_y;
 	stats.setName(n); //name is defined
 	baseDmg = (float)(rand() % 6); //0-5
 	stats.setHealth(100.f);
@@ -35,26 +42,32 @@ citizen::citizen(std::string n) {
 	equip.setWeapon(-1);
 }
 
-void citizen::update() { //should be called every item change
-	stats.setDefense(getItemDef(equip.getHead()) + getItemDef(equip.getChest()) + getItemDef(equip.getBoots()) + getItemDef(equip.getWeapon()));
-	stats.setDamage(baseDmg + getItemDmg(equip.getWeapon()));
+citizen::~citizen() {
+
 }
 
-void citizen::sleepTick() { //called per second
+void citizen::update(float dt) {
+	
 	if (stats.getSleep() > 0)
-		stats.decrementSleep(-1);
+		stats.decrementSleep(-1 * dt);
 
 	//else
 	//function to sleep if below or equal to 0
 	//sleeping on floor doesn't fill bar fully
-}
 
-void citizen::eatTick() { //called per second
 	if (stats.getEat() > 0)
-		stats.decrementEat(-1);
+		stats.decrementEat(-1 * dt);
 	//else
 	//function to eat if below or equal to 0
 	//if no food found, enter starve state and debuff
+
+	std::cout << stats.getSleep() << std::endl;
+}
+
+void citizen::refreshStats() {
+
+	stats.setDefense(getItemDef(equip.getHead()) + getItemDef(equip.getChest()) + getItemDef(equip.getBoots()) + getItemDef(equip.getWeapon()));
+	stats.setDamage(baseDmg + getItemDmg(equip.getWeapon()));
 }
 
 void citizen::toDo() {
@@ -93,4 +106,8 @@ std::string citizen::generateName() {
 		counter++;
 	}
 	return line;
+}
+
+void citizen::draw(sf::RenderWindow &window) {
+	window.draw(citizenSprite);
 }
