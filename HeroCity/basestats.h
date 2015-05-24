@@ -12,6 +12,9 @@ private:
 
 public:
 
+	basestats() { health = 100; damage = 1; defense = 0; movement = 50; sleep = 10000; eat = 10000;  name = "DEFAULT";  }
+	~basestats();
+
 	float getHealth() { return health; }
 	float getDamage() { return damage; }
 	float getDefense() { return defense; }

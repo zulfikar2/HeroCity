@@ -61,7 +61,7 @@ void citizen::update(float dt) {
 	//function to eat if below or equal to 0
 	//if no food found, enter starve state and debuff
 
-	std::cout << stats.getSleep() << std::endl;
+	std::cout << stats.getSleep() << std::endl; //test
 }
 
 void citizen::refreshStats() {

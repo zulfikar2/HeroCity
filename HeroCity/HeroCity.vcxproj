@@ -12,6 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="citizen.cpp" />
+    <ClCompile Include="game.cpp" />
     <ClCompile Include="item.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="menu.cpp" />
@@ -20,6 +21,7 @@
     <ClInclude Include="basestats.h" />
     <ClInclude Include="citizen.h" />
     <ClInclude Include="equipment.h" />
+    <ClInclude Include="game.h" />
     <ClInclude Include="item.h" />
     <ClInclude Include="menu.h" />
   </ItemGroup>
