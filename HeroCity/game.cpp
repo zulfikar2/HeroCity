@@ -26,7 +26,7 @@ void Game::gameLoop() {
 		clock.restart();
 
 		window.clear(sf::Color::Black);
-
+		peekState()->draw(dt);
 		window.display();
 	}
 }

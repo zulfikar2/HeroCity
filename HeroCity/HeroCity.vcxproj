@@ -15,6 +15,7 @@
     <ClCompile Include="game.cpp" />
     <ClCompile Include="item.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="mainState.cpp" />
     <ClCompile Include="menu.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -24,6 +25,7 @@
     <ClInclude Include="game.h" />
     <ClInclude Include="gameState.h" />
     <ClInclude Include="item.h" />
+    <ClInclude Include="mainState.h" />
     <ClInclude Include="menu.h" />
   </ItemGroup>
   <ItemGroup>

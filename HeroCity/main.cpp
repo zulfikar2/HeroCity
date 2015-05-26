@@ -1,5 +1,6 @@
 //#include <iostream>
 #include "game.h"
+#include "menu.h"
 
 #pragma region oldMain
 /*int main() {
@@ -115,6 +116,7 @@ int main() {
 
 	Game game;
 
+	game.pushState(new Menu(&game));
 	game.gameLoop();
 
 	return 0;
