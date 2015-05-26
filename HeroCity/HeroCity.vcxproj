@@ -22,6 +22,7 @@
     <ClInclude Include="citizen.h" />
     <ClInclude Include="equipment.h" />
     <ClInclude Include="game.h" />
+    <ClInclude Include="gameState.h" />
     <ClInclude Include="item.h" />
     <ClInclude Include="menu.h" />
   </ItemGroup>

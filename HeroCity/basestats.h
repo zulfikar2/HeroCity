@@ -12,8 +12,7 @@ private:
 
 public:
 
-	basestats() { health = 100; damage = 1; defense = 0; movement = 50; sleep = 10000; eat = 10000;  name = "DEFAULT";  }
-	~basestats();
+	basestats() { health = 100; damage = 1; defense = 0; movement = 50; sleep = 10000; eat = 10000;  name = "DEFAULT"; }
 
 	float getHealth() { return health; }
 	float getDamage() { return damage; }
@@ -31,11 +30,11 @@ public:
 	void setEat(float et) { eat = et; }
 	void setName(std::string n) { name = n; }
 
-	void decrementEat(int val) { eat -= val; }
-	void incrementEat(int val) { eat += val; }
+	void decrementEat(float val) { eat -= val; }
+	void incrementEat(float val) { eat += val; }
 
-	void decrementSleep(int val) { sleep -= val; }
-	void incrementSleep(int val) { sleep += val; }
+	void decrementSleep(float val) { sleep -= val; }
+	void incrementSleep(float val) { sleep += val; }
 
 };
 

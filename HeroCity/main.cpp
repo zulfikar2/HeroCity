@@ -1,19 +1,19 @@
-#include <iostream>
-#include "citizen.h"
-#include "menu.h"
+//#include <iostream>
+#include "game.h"
 
-int main() {
+#pragma region oldMain
+/*int main() {
 	const int WINDOW_WIDTH = 800;
 	const int WINDOW_HEIGHT = 600;
 
 	sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "SFML_TEST");
 
-	/*
-	-------EXAMPLE. SHOULD TRY NOT TO LOAD SPRITES/TEXTURES IN MAIN----------
-	sf::Texture character;
-	if (!character.loadFromFile("../CharSpriteSheet(BannedStory_PlaceHolder)/alert_0.png")){
-	std::cout << "CHARACTER TEXTURE ERROR!" << std::endl;
-	}*/
+	
+	//-------EXAMPLE. SHOULD TRY NOT TO LOAD SPRITES/TEXTURES IN MAIN----------
+	//sf::Texture character;
+	//if (!character.loadFromFile("../CharSpriteSheet(BannedStory_PlaceHolder)/alert_0.png")){
+	//std::cout << "CHARACTER TEXTURE ERROR!" << std::endl;
+	//}
 
 	Menu menu(WINDOW_WIDTH, WINDOW_HEIGHT);
 
@@ -91,7 +91,7 @@ int main() {
 		}
 
 		sf::Time time = clock.getElapsedTime();
-		//citizen.update(time.asMilliseconds());  updates sprites/textures...etc frame independant of citizen object
+		citizen.update(time.asMilliseconds());  updates sprites/textures...etc frame independant of citizen object
 
 		std::cout << 1.0f / time.asSeconds() << std::endl; //shows frame rate
 
@@ -108,5 +108,14 @@ int main() {
 
 		window.display();
 	}
+	return 0;
+	}*/#pragma endregion
+
+int main() {
+
+	Game game;
+
+	game.gameLoop();
+
 	return 0;
 }

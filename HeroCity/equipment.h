@@ -13,7 +13,6 @@ private:
 public:
 
 	equipment() { head = -1; chest = -1; weapon = -1; boots = -1; }
-	~equipment();
 
 	int getHead() { if (head == -1) return 0; else return head; }
 	int getChest() { if (chest == -1) return 0; else return chest; }
