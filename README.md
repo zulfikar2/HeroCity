@@ -12,3 +12,5 @@ Note :
 The citizen will be able to be equipped with gear to defend against random attack from monster and escapees from the dungeon. They however, won't be as strong as the hero, so be sure to have items ready for the heroes.
 
 **made with the help of SFML 2.3 library.**
+
+**DISCONTINUED ON GITHUB. ALL PROGRESS AND OTHER REPOSITORIES ARE NOW ON GITLAB**
